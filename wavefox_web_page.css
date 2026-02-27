@@ -1,0 +1,56 @@
+:root:not([inFullscreen], [inDOMFullscreen])
+{
+    #navigator-toolbox
+    {
+        border-bottom: none !important;
+    }
+
+    #browser
+    {
+        #sidebar-box
+        {
+            margin-block-end: 1px !important;
+            padding-block: 0px !important;
+
+            #sidebar
+            {
+                outline: none !important;
+                border: none !important /*1px solid var(--chrome-content-separator-color) !important;*/
+                background-clip: padding-box !important;
+            }
+        }
+
+        #tabbrowser-tabbox
+        {
+            outline: none !important;
+            box-shadow: none !important;
+
+            #tabbrowser-tabpanels
+            {
+                overflow: clip !important;
+                margin-block: 0px 0px !important;
+                margin-inline: 0px !important;
+                border: 1px solid transparent !important; /*1px solid var(--chrome-content-separator-color) !important;*/
+                border-radius: 6px !important; /* var(--border-radius-medium) */
+                box-shadow: var(--content-area-shadow) !important;
+                background-clip: padding-box !important;
+            }
+
+            &[sidebar-shown]:not([sidebar-positionend]) #tabbrowser-tabpanels
+            {
+                margin-inline-start: 0px !important;
+            }
+
+            &[sidebar-shown][sidebar-positionend] #tabbrowser-tabpanels
+            {
+                margin-inline-end: 0px !important;
+            }
+        }
+    }
+
+    &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox > #tabbrowser-tabpanels
+    {
+        margin-block-start: 0px !important;
+    }
+}
+

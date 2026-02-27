@@ -1,0 +1,35 @@
+menuitem,
+toolbarbutton,
+.urlbarView-row-inner {
+  border: solid 1px transparent !important;
+}
+
+menuitem:hover:not([disabled="true"]) {
+  border: solid 1px SelectedItem !important;
+}
+
+:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
+  &:not([disabled]):hover {
+    color: -moz-menuhovertext !important;
+    background-color: -moz-menuhover !important;
+    border: solid 1px SelectedItem !important;
+  }
+}
+
+.urlbarView-row-inner {
+  &[selected] {
+    border: solid 1px SelectedItem !important;
+    border-radius: calc(var(--urlbarView-row-gutter) + var(--urlbar-inner-border-radius)) !important;
+  }
+}
+.urlbarView-row {
+  &[selected] {
+    background-color: -moz-menuhover !important;
+    color: -moz-menuhovertext !important;
+  }
+}
+
+menuseparator,
+toolbarseparator {
+  opacity: 33% !important;
+}

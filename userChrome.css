@@ -1,0 +1,13 @@
+@layer BasicPriority, HighPriority, VeryHighPriority;
+
+@import "wavefox_selected_tab_indicator.css";
+@import "wavefox_tab_separators.css";
+@import "wavefox_tab_shadows.css";
+@import "wavefox_tabs.css";
+@import "wavefox_web_page.css";
+@import "wavefox_toolbar.css";
+@import "wavefox_drag_space.css";
+@import "findbar.css";
+@import "statuspanel.css";
+@import "popups.css";
+@import "buttons.css";

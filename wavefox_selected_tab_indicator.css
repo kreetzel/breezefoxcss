@@ -1,0 +1,5 @@
+.tabbrowser-tab[visuallyselected] .tab-loading-burst
+{
+    box-shadow: inset 0px 3px 0px SelectedItem !important;
+}
+

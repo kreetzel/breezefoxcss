@@ -1,0 +1,22 @@
+@-moz-document url-prefix(about:) {
+  :root {
+    --color-accent-primary: SelectedItem !important;
+  }
+}
+
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  :root {
+    --newtab-background-card: var(--color-white) !important;
+    --newtab-weather-background-color: var(--color-white) !important;
+    --newtab-background-color: SelectedItem !important;
+  }
+
+  .top-site-outer,
+  .top-site-outer .tile {
+    border-radius: var(--border-radius-medium) !important;
+  }
+
+  .personalize-button {
+    background-color: var(--newtab-background-color-secondary) !important;
+  }
+}

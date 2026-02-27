@@ -1,0 +1,19 @@
+#nav-bar .toolbarbutton-1:hover:not([disabled="true"]) {
+  & > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
+    background-color: transparent !important;
+    outline: solid 1px SelectedItem !important;
+  }
+}
+
+#nav-bar .toolbarbutton-1 {
+& > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
+    outline: solid 1px transparent !important;
+  }
+}
+
+#nav-bar .toolbarbutton-1:is([open="true"]) {
+  & > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
+    background-color: -moz-menuhover !important;
+    outline: solid 1px SelectedItem !important;
+  }
+}
