@@ -11,3 +11,6 @@ Firefox userChrome.css made to match KDE's Breeze theming
 - QNetITQ/WaveFox
 - RobotoSkunk/zen-better-findbar
 - AmirhBeigi/zen-floating-statusbar
+
+# Screenshots:
+![image](screenshots/screenshot1.png)
