@@ -8,6 +8,10 @@ menuitem:hover:not([disabled="true"]) {
   border: solid 1px SelectedItem !important;
 }
 
+.menuitem-iconic:hover {
+  background-color: -moz-menuhover !important;
+}
+
 :is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
   &:not([disabled]):hover {
     color: -moz-menuhovertext !important;
