@@ -2,7 +2,7 @@
 Firefox userChrome.css made to match KDE's Breeze theming
 
 # Screenshots:
-![image](screenshots/screenshot1.png)
+![image](screenshots/screenshot.png)
 
 # How to:
 - Use System theme - auto
