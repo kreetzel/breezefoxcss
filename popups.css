@@ -29,6 +29,10 @@ menuitem:hover:not([disabled="true"]) {
   }
 }
 
+.urlbarView-row:hover {
+  background-color: -moz-menuhover !important;
+}
+
 menuseparator,
 toolbarseparator {
   opacity: 33% !important;
