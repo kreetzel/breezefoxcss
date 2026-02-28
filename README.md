@@ -1,6 +1,9 @@
 # breezefoxcss
 Firefox userChrome.css made to match KDE's Breeze theming
 
+# Screenshots:
+![image](screenshots/screenshot1.png)
+
 # How to:
 - Use System theme - auto
 - Enable toolkit.legacyUserProfileCustomizations.stylesheets , widget.gtk.rounded-bottom-corners.enabled , svg.context-properties.content.enabled , browser.compactmode.show in about:config
@@ -12,6 +15,3 @@ Firefox userChrome.css made to match KDE's Breeze theming
 - QNetITQ/WaveFox
 - RobotoSkunk/zen-better-findbar
 - AmirhBeigi/zen-floating-statusbar
-
-# Screenshots:
-![image](screenshots/screenshot1.png)
