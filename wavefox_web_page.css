@@ -31,7 +31,7 @@
                 margin-block: 0px 0px !important;
                 margin-inline: 0px !important;
                 border: 1px solid transparent !important; /*1px solid var(--chrome-content-separator-color) !important;*/
-                border-radius: 6px !important; /* var(--border-radius-medium) */
+                border-radius: 8px !important; /* var(--border-radius-medium) */
                 box-shadow: var(--content-area-shadow) !important;
                 background-clip: padding-box !important;
             }
