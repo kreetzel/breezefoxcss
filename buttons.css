@@ -17,3 +17,8 @@
     outline: solid 1px SelectedItem !important;
   }
 }
+
+.tab-close-button.close-icon:hover {
+  background-color: #ff9eac !important;
+  fill: var(--toolbar-bgcolor) !important;
+}
