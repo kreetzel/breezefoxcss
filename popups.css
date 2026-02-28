@@ -13,13 +13,18 @@ menuitem:hover:not([disabled="true"]) {
   border: solid 1px SelectedItem !important;
 }
 
+.unified-extensions-item-menu-button.subviewbutton.subviewbutton-iconic:hover .toolbarbutton-icon {
+  background-color: -moz-menuhover !important;
+  border: solid 1px SelectedItem !important;
+}
+
 .downloadButton:hover,
 richlistitem:hover,
 .menuitem-iconic:hover {
   background-color: -moz-menuhover !important;
 }
 
-:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
+:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton):not(.unified-extensions-item-menu-button) {
   &:not([disabled]):hover {
     color: -moz-menuhovertext !important;
     background-color: -moz-menuhover !important;
