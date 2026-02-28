@@ -20,5 +20,9 @@
 
 .tab-close-button.close-icon:hover {
   background-color: #ff9eac !important;
+}
+
+.tabbrowser-tab:is([selected="true"]) .tab-close-button.close-icon:hover {
   fill: var(--toolbar-bgcolor) !important;
 }
+
