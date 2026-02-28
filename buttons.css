@@ -1,28 +1,41 @@
-.toolbarbutton-1:hover:not([disabled="true"]) {
-  & > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
-    background-color: transparent !important;
-    outline: solid 1px SelectedItem !important;
-  }
+menuitem,
+toolbarbutton,
+.urlbarView-row-inner,
+#downloadsHistory {
+  border: solid 1px transparent !important;
 }
 
-.toolbarbutton-1 {
-& > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
-    outline: solid 1px transparent !important;
-  }
+#downloadsHistory:hover,
+menuitem:hover:not([disabled="true"]) {
+  border: solid 1px SelectedItem !important;
 }
 
-.toolbarbutton-1:is([open="true"]) {
-  & > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
+:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
+  &:not([disabled]):hover {
+    color: -moz-menuhovertext !important;
     background-color: -moz-menuhover !important;
-    outline: solid 1px SelectedItem !important;
+    border: solid 1px SelectedItem !important;
   }
 }
 
-.tab-close-button.close-icon:hover {
-  background-color: #ff9eac !important;
+.urlbarView-row-inner {
+  &[selected] {
+    border: solid 1px SelectedItem !important;
+    border-radius: calc(var(--urlbarView-row-gutter) + var(--urlbar-inner-border-radius)) !important;
+  }
+}
+.urlbarView-row {
+  &[selected] {
+    background-color: -moz-menuhover !important;
+    color: -moz-menuhovertext !important;
+  }
 }
 
-.tabbrowser-tab:is([selected="true"]) .tab-close-button.close-icon:hover {
-  fill: var(--toolbar-bgcolor) !important;
+.urlbarView-row:hover {
+  background-color: -moz-menuhover !important;
 }
 
+menuseparator,
+toolbarseparator {
+  opacity: 33% !important;
+}
