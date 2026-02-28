@@ -1,13 +1,20 @@
 menuitem,
 toolbarbutton,
-.urlbarView-row-inner {
+richlistitem,
+.urlbarView-row-inner,
+#downloadsHistory {
   border: solid 1px transparent !important;
 }
 
+.downloadButton:hover,
+richlistitem:hover,
+#downloadsHistory:hover,
 menuitem:hover:not([disabled="true"]) {
   border: solid 1px SelectedItem !important;
 }
 
+.downloadButton:hover,
+richlistitem:hover,
 .menuitem-iconic:hover {
   background-color: -moz-menuhover !important;
 }
