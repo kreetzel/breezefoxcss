@@ -1,3 +1,9 @@
+:root {
+    --border-radius-medium: 4px !important;
+    --arrowpanel-border-radius: 4px !important;
+    --arrowpanel-menuitem-border-radius: 4px !important;
+}
+
 .urlbar-input-container .urlbar-page-action,
 .urlbar-input-container box:is([role="button"]),
 .searchmode-switcher {
