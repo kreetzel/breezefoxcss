@@ -1,9 +1,9 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
 @import "wavefox_web_page.css";
-@import "wavefox_toolbar.css";
 @import "findbar.css";
 @import "statuspanel.css";
 @import "popups.css";
 @import "buttons.css";
 @import "tabs.css";
+
