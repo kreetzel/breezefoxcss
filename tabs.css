@@ -68,3 +68,7 @@
 #tabbrowser-arrowscrollbox {
   margin-left: -3px !important;
 }
+
+#TabsToolbar .toolbarbutton-1 {
+  width: 35px !important;
+}
