@@ -61,3 +61,10 @@
   margin-inline-start: 0 !important;
 }
 
+.tabbrowser-tab:is([pinned="true"]) {
+  padding-right: 5px !important;
+}
+
+#tabbrowser-arrowscrollbox {
+  margin-left: -3px !important;
+}
