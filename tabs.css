@@ -1,3 +1,7 @@
+:root {
+  --tab-min-height: 24px !important;
+}
+
 .tabbrowser-tab[visuallyselected]
 {
   .tab-background
