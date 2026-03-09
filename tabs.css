@@ -71,3 +71,7 @@
   width: 35px !important;
   border-right: solid 1px var(--chrome-content-separator-color) !important;
 }
+
+#TabsToolbar {
+  box-shadow: inset 0 -1px var(--chrome-content-separator-color) !important;
+}
