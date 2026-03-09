@@ -63,6 +63,7 @@
 
 .tabbrowser-tab:is([pinned="true"]) {
   padding-right: 5px !important;
+  margin-left: -3px !important;
 }
 
 #tabbrowser-arrowscrollbox {
@@ -71,4 +72,5 @@
 
 #TabsToolbar .toolbarbutton-1 {
   width: 35px !important;
+  border-right: solid 1px var(--chrome-content-separator-color) !important;
 }
