@@ -2,15 +2,12 @@
   --tab-min-height: 24px !important;
 }
 
-.tabbrowser-tab[visuallyselected]
-{
-  .tab-background
-  {
+.tabbrowser-tab[visuallyselected] {
+  .tab-background {
     background-color: var(--toolbar-bgcolor) !important;
   }
 
-  .tab-content
-  {
+  .tab-content {
     color: var(--toolbar-color) !important;
   }
 }
