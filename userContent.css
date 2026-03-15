@@ -5,7 +5,15 @@
     --button-border-radius: 4px !important;
     --border-radius-medium: 4px !important;
   }
+
+  #input:is([type="checkbox"]):is([value="on"]),
+  .checkbox-check:is([checked="true"]),
+  .radio-check:is([selected="true"]) {
+    accent-color: -moz-menuhover !important;
+    box-shadow: SelectedItem 0 0 0 1px !important;
+  }
 }
+
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
   :root {

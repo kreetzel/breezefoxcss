@@ -55,6 +55,6 @@
   fill: var(--toolbar-bgcolor) !important;
 }
 
-.urlbar-input-container {
+.urlbar-background {
   border: solid 1px var(--chrome-content-separator-color) !important;
 }
