@@ -1,6 +1,6 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
-@import "wavefox_web_page.css";
+@import "border.css";
 @import "findbar.css";
 @import "statuspanel.css";
 @import "popups.css";
