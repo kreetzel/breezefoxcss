@@ -1,0 +1,25 @@
+#navigator-toolbox {
+  border-top: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+}
+
+#browser {
+  border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-top: none !important;
+}
+
+#navigator-toolbox {
+  &:-moz-window-inactive {
+    border-top: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#browser {
+  &:-moz-window-inactive {
+    border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-top: none !important;
+  }
+}
