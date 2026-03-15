@@ -20,6 +20,10 @@
   outline: solid 1px SelectedItem !important;
 }
 
+.urlbar-input-container {
+  border: solid 1px var(--chrome-content-separator-color) !important;
+}
+
 .urlbar-input-container .urlbar-page-action:is([open="true"]),
 .urlbar-input-container box:is([role="button"]):is([open="true"]),
 .searchmode-switcher:is([open="true"]) {
