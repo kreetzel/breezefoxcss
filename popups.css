@@ -20,7 +20,7 @@ menuitem:hover:not([disabled="true"]) {
 
 .downloadButton:hover,
 richlistitem:hover,
-.menuitem-iconic:hover {
+.menuitem-iconic:hover:not([disabled="true"]) {
   background-color: -moz-menuhover !important;
 }
 
