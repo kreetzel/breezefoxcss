@@ -4,7 +4,7 @@
 }
 
 #statuspanel-label {
-  border-radius: 6px !important;
+  border-radius: 4px !important;
   padding: 2px 10px !important;
   border: 1px solid var(--chrome-content-separator-color) !important;
   background: var(--toolbar-bgcolor) !important;
