@@ -1,7 +1,7 @@
 :root {
-    --border-radius-medium: 4px !important;
-    --arrowpanel-border-radius: 4px !important;
-    --arrowpanel-menuitem-border-radius: 4px !important;
+  --border-radius-medium: 4px !important;
+  --arrowpanel-border-radius: 4px !important;
+  --arrowpanel-menuitem-border-radius: 4px !important;
 }
 
 .urlbar-input-container .urlbar-page-action,
@@ -18,10 +18,6 @@
 
 .searchmode-switcher:hover {
   outline: solid 1px SelectedItem !important;
-}
-
-.urlbar-input-container {
-  border: solid 1px var(--chrome-content-separator-color) !important;
 }
 
 .urlbar-input-container .urlbar-page-action:is([open="true"]),
@@ -57,4 +53,8 @@
 
 .tabbrowser-tab:is([selected="true"]) .tab-close-button.close-icon:hover {
   fill: var(--toolbar-bgcolor) !important;
+}
+
+.urlbar-input-container {
+  border: solid 1px var(--chrome-content-separator-color) !important;
 }
