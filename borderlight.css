@@ -1,0 +1,83 @@
+/* light mode */
+#TabsToolbar {
+  border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-radius: 6px 6px 0 0 !important;
+  border-bottom: none !important;
+}
+
+#nav-bar {
+  border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+}
+
+#browser {
+  border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-top: none !important;
+}
+
+/* inactive */
+#TabsToolbar {
+&:-moz-window-inactive {
+    border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-radius: 6px 6px 0 0 !important;
+    border-bottom: none !important;
+  }
+}
+
+#nav-bar {
+&:-moz-window-inactive {
+    border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#browser {
+&:-moz-window-inactive {
+    border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-top: none !important;
+  }
+}
+
+/* tabs */
+.tab-stack {
+  border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+}
+
+#tabbrowser-arrowscrollbox-periphery {
+  border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+}
+
+#TabsToolbar .toolbarbutton-1 {
+  border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+}
+
+#TabsToolbar {
+  box-shadow: inset 0 -1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+}
+
+/* inactive */
+.tab-stack {
+  &:-moz-window-inactive {
+    border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#tabbrowser-arrowscrollbox-periphery {
+&:-moz-window-inactive {
+    border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#TabsToolbar .toolbarbutton-1 {
+&:-moz-window-inactive {
+    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#TabsToolbar {
+&:-moz-window-inactive {
+    box-shadow: inset 0 -1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
