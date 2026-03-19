@@ -1,7 +1,12 @@
-#navigator-toolbox {
-  border-top: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
-  border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+#TabsToolbar {
+  border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-radius: 6px 6px 0 0 !important;
+  border-bottom: none !important;
+}
+
+#nav-bar {
   border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
+  border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
 }
 
 #browser {
@@ -9,16 +14,23 @@
   border-top: none !important;
 }
 
-#navigator-toolbox {
-  &:-moz-window-inactive {
-    border-top: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
-    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+#TabsToolbar {
+&:-moz-window-inactive {
+    border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-radius: 6px 6px 0 0 !important;
+    border-bottom: none !important;
+  }
+}
+
+#nav-bar {
+&:-moz-window-inactive {
     border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
   }
 }
 
 #browser {
-  &:-moz-window-inactive {
+&:-moz-window-inactive {
     border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
     border-top: none !important;
   }
