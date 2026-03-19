@@ -9,6 +9,7 @@ Firefox userChrome.css made to match KDE's Breeze theming
 - Enable toolkit.legacyUserProfileCustomizations.stylesheets , widget.gtk.rounded-bottom-corners.enabled (optional) , browser.compactmode.show in about:config
 - Set widget.use-xdg-desktop-portal.file-picker to 1 , browser.uidensity to 1 in about:config
 - Put all the files into the chrome folder inside your browser profile folder
+- Modify userChrome.css to include either borderlight.css or borderdark.css depending on your theme colors
 - Profit
 
 # Thanks to:
