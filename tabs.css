@@ -75,3 +75,28 @@
 #TabsToolbar {
   box-shadow: inset 0 -1px color-mix(in srgb, var(--toolbox-bgcolor), black 20%) !important;
 }
+
+.tab-stack {
+&:-moz-window-inactive {
+    border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#tabbrowser-arrowscrollbox-periphery {
+&:-moz-window-inactive {
+    border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#TabsToolbar .toolbarbutton-1 {
+&:-moz-window-inactive {
+    border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
+
+#TabsToolbar {
+&:-moz-window-inactive {
+    box-shadow: inset 0 -1px color-mix(in srgb, var(--toolbox-bgcolor-inactive), black 20%) !important;
+  }
+}
