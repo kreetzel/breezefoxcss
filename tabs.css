@@ -68,6 +68,11 @@
   width: 35px !important;
 }
 
-#main-window:is([sizemode="maximized"]) #TabsToolbar {
+#main-window:is([sizemode="maximized"]) #TabsToolbar,
+#main-window:is([sizemode="fullscreen"]) #TabsToolbar {
   border-radius: 0 !important;
+}
+
+#main-window:is([sizemode="fullscreen"]) #browser {
+  border: none !important;
 }
