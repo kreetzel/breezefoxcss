@@ -69,10 +69,14 @@
 }
 
 #main-window:is([sizemode="maximized"]) #TabsToolbar,
-#main-window:is([sizemode="fullscreen"]) #TabsToolbar {
-  border-radius: 0 !important;
-}
-
+#main-window:is([sizemode="fullscreen"]) #TabsToolbar,
+#main-window:is([sizemode="maximized"]) #browser,
 #main-window:is([sizemode="fullscreen"]) #browser {
   border: none !important;
+}
+
+#main-window:is([sizemode="maximized"]) #nav-bar,
+#main-window:is([sizemode="fullscreen"]) #nav-bar {
+  border-left: none !important;
+  border-right: none !important;
 }
