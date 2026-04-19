@@ -32,6 +32,11 @@ richlistitem:hover,
   }
 }
 
+.urlbarView-row {
+  margin-left: 1px !important;
+  margin-right: 1px !important;
+}
+
 .urlbarView-row-inner {
   &[selected] {
     border: solid 1px SelectedItem !important;
