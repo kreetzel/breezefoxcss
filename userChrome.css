@@ -1,8 +1,5 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
-@import "borderlight.css";
 @import "findbar.css";
 @import "statuspanel.css";
-@import "popups.css";
-@import "buttons.css";
 @import "tabs.css";
