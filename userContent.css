@@ -5,6 +5,13 @@
     --button-border-color-hover: SelectedItem !important;
     --button-border-radius: 4px !important;
     --border-radius-medium: 4px !important;
+    --border-radius-large: 4px !important;
+    --content-search-handoff-ui-border-radius: 4px !important;
+    --color-accent-primary-hover: -moz-menuhover !important;
+    --button-background-color-primary-hover: -moz-menuhover !important;
+    --button-background-color-active: SelectedItem !important;
+    --color-accent-primary-active: SelectedItem !important;
+    --color-accent-primary-selected: SelectedItem !important;
   }
 
   #input:is([type="checkbox"]):is([value="on"]),
@@ -20,6 +27,7 @@
     --newtab-background-color: SelectedItem !important;
   }
 
+  .search-handoff-button,
   .top-site-outer,
   .top-site-outer .tile {
     border-radius: var(--border-radius-medium) !important;
