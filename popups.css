@@ -37,3 +37,14 @@ menuitem:hover:not([disabled]) {
     }
   }
 }
+
+.urlbarView-row {
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+}
+
+.urlbarView-row-inner:hover:not([selected]) {
+  color: -moz-menuhover-text !important;
+  background-color: -moz-menuhover !important;;
+  border: solid 1px SelectedItem !important;
+}
