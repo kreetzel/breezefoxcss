@@ -14,8 +14,8 @@
 
 .tabbrowser-tab[selected="true"] {
   .tab-background {
-    background-color: var(--toolbar-bgcolor) !important;
-    border: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), light-dark(black, white) 30%) !important;
+    background-color: var(--toolbar-background-color) !important;
+    border: solid 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
   }
 
   .tab-content {
@@ -49,16 +49,16 @@
 }
 
 #TabsToolbar {
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--toolbox-bgcolor), light-dark(black, white) 30%) !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
 }
 
 #nav-bar {
-  border-left: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), light-dark(black, white) 30%) !important;
-  border-right: solid 1px color-mix(in srgb, var(--toolbox-bgcolor), light-dark(black, white) 30%) !important;
+  border-left: solid 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
+  border-right: solid 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
 }
 
 #browser {
-  border: 1px solid color-mix(in srgb, var(--toolbox-bgcolor), light-dark(black, white) 30%)  !important;
+  border: 1px solid color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%)  !important;
   border-top: none !important;
 }
 
@@ -71,3 +71,5 @@
 .titlebar-buttonbox-container {
   margin-left: 4px !important;
 }
+
+
