@@ -10,7 +10,8 @@ richlistitem,
 .downloadButton:hover,
 richlistitem:hover,
 #downloadsHistory:hover,
-menuitem:hover:not([disabled]) {
+menuitem:hover:not([disabled]),
+.urlbarView-action-btn:hover {
   border-color: SelectedItem !important;
 }
 
@@ -63,4 +64,9 @@ menuitem:hover:not([disabled]) {
       border: solid 1px SelectedItem !important;
     }
   }
+}
+
+.urlbarView-action-btn {
+  background-color: transparent !important;
+  border: solid 1px transparent !important;
 }
