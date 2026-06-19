@@ -17,7 +17,7 @@ menuitem:hover:not([disabled]),
 
 :is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
   &:not([disabled]):hover {
-    color: -moz-menuhover-text !important;
+    color: -moz-menuhovertext !important;
     background-color: -moz-menuhover !important;;
     border: solid 1px SelectedItem !important;
   }
@@ -32,7 +32,7 @@ menuitem:hover:not([disabled]),
 .searchmode-switcher-panel-list {
   & > panel-item::part(button) {
     &:hover {
-      color: -moz-menuhover-text !important;
+      color: -moz-menuhovertext !important;
       background-color: -moz-menuhover !important;;
       border: solid 1px SelectedItem !important;
     }
@@ -45,7 +45,7 @@ menuitem:hover:not([disabled]),
 }
 
 .urlbarView-row-inner:hover:not([selected]) {
-  color: -moz-menuhover-text !important;
+  color: -moz-menuhovertext !important;
   background-color: -moz-menuhover !important;;
   border: solid 1px SelectedItem !important;
 }
@@ -59,7 +59,7 @@ menuitem:hover:not([disabled]),
 .moz-button-subviewbutton-nav {
   &::part(button) {
     &:hover {
-      color: -moz-menuhover-text !important;
+      color: -moz-menuhovertext !important;
       background-color: -moz-menuhover !important;;
       border: solid 1px SelectedItem !important;
     }
