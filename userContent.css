@@ -12,6 +12,7 @@
     --button-background-color-active: SelectedItem !important;
     --color-accent-primary-active: SelectedItem !important;
     --color-accent-primary-selected: SelectedItem !important;
+    --button-background-color-primary: SelectedItem !important;
   }
 
   #input:is([type="checkbox"]):is([value="on"]),
@@ -19,6 +20,11 @@
   .radio-check:is([selected="true"]) {
     accent-color: SelectedItem !important;
   }
+
+  [role="radio"]:hover:not([checked]) {
+    border: solid 1px var(--button-border-color-hover) !important;
+  }
+}
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
   :root {
