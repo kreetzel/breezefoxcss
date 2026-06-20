@@ -16,7 +16,7 @@ menuitem:hover:not([disabled]),
 }
 
 :is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
-  &:not([disabled]):hover {
+  &:not([disabled]):not(.unified-extensions-item-menu-button.subviewbutton):hover {
     color: -moz-menuhovertext !important;
     background-color: -moz-menuhover !important;;
     border: solid 1px SelectedItem !important;
@@ -69,4 +69,12 @@ menuitem:hover:not([disabled]),
 .urlbarView-action-btn {
   background-color: transparent !important;
   border: solid 1px transparent !important;
+}
+
+.unified-extensions-item-menu-button.subviewbutton {
+  &:hover > .toolbarbutton-icon {
+    color: -moz-menuhovertext !important;
+    background-color: -moz-menuhover !important;;
+    border: solid 1px SelectedItem !important;
+  }
 }
