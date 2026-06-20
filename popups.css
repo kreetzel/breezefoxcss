@@ -39,17 +39,6 @@ menuitem:hover:not([disabled]),
   }
 }
 
-.urlbarView-row {
-  margin-left: 2px !important;
-  margin-right: 2px !important;
-}
-
-.urlbarView-row:hover:not([selected]) {
-  color: -moz-menuhovertext !important;
-  background-color: -moz-menuhover !important;;
-  border: solid 1px SelectedItem !important;
-}
-
 .moz-button-subviewbutton-nav {
   &::part(button) {
     border: solid 1px transparent !important;
@@ -66,9 +55,29 @@ menuitem:hover:not([disabled]),
   }
 }
 
+.urlbarView-row {
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+}
+
+.urlbarView-row:hover:not([selected]) {
+  color: -moz-menuhovertext !important;
+  background-color: -moz-menuhover !important;;
+  border: solid 1px SelectedItem !important;
+}
+
 .urlbarView-action-btn {
   background-color: transparent !important;
   border: solid 1px transparent !important;
+}
+
+.urlbarView-button-menu {
+  background-color: transparent !important;
+}
+
+.urlbarView-button-menu:hover {
+  color: var(--button-text-color) !important;
+  box-shadow: inset 0 0 0px 1px SelectedItem !important;
 }
 
 .unified-extensions-item-menu-button.subviewbutton {
