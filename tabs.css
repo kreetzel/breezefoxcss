@@ -41,7 +41,7 @@
 }
 
 .tabbrowser-tab[selected="true"] .tab-close-button.close-icon:hover {
-  color: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-background-color) !important;
 }
 
 [open] > .urlbar-background {
