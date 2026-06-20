@@ -1,8 +1,10 @@
 @-moz-document url-prefix(about:) {
   :root {
     --color-accent-primary: SelectedItem !important;
+    --button-background-color: transparent !important;
     --button-background-color-hover: rgba(currentColor) !important;
     --button-border-color-hover: SelectedItem !important;
+    --button-border: solid 1px var(--border-color) !important;
     --button-border-radius: 5px !important;
     --border-radius-medium: 5px !important;
     --border-radius-large: 5px !important;
