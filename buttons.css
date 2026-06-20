@@ -3,4 +3,6 @@
   --arrowpanel-border-radius: 5px !important;
   --arrowpanel-menuitem-border-radius: 5px !important;
   --card-border-radius: 5px !important;
+  --button-background-color-ghost-hover: -moz-menuhover !important;
+  --button-text-color-ghost-hover: -moz-menuhovertext !important;
 }
