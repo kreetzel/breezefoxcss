@@ -3,10 +3,10 @@
     --color-accent-primary: SelectedItem !important;
     --button-background-color-hover: rgba(currentColor) !important;
     --button-border-color-hover: SelectedItem !important;
-    --button-border-radius: 4px !important;
-    --border-radius-medium: 4px !important;
-    --border-radius-large: 4px !important;
-    --content-search-handoff-ui-border-radius: 4px !important;
+    --button-border-radius: 5px !important;
+    --border-radius-medium: 5px !important;
+    --border-radius-large: 5px !important;
+    --content-search-handoff-ui-border-radius: 5px !important;
     --color-accent-primary-hover: -moz-menuhover !important;
     --button-background-color-primary-hover: -moz-menuhover !important;
     --button-background-color-active: SelectedItem !important;
@@ -22,7 +22,7 @@
   }
 
   [role="radio"]:hover:not([checked]) {
-    border: solid 1px var(--button-border-color-hover) !important;
+    border: solid 1px SelectedItem !important;
   }
 }
 
@@ -41,5 +41,14 @@
 
   .personalize-button {
     background-color: var(--newtab-background-color-secondary) !important;
+  }
+
+  .top-sites-list .top-site-outer {
+    border: solid 1px transparent !important;
+  }
+
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    background: -moz-menuhover !important;
+    border: solid 1px SelectedItem !important;
   }
 }

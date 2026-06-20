@@ -4,7 +4,7 @@ richlistitem,
 .urlbarView-row-inner,
 #downloadsHistory {
   border: solid 1px transparent !important;
-  border-radius: 4px !important;
+  border-radius: 5px !important;
 }
 
 .downloadButton:hover,
