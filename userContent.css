@@ -15,6 +15,7 @@
     --color-accent-primary-active: SelectedItem !important;
     --color-accent-primary-selected: SelectedItem !important;
     --button-background-color-primary: SelectedItem !important;
+    --button-font-weight: normal !important;
   }
 
   #input:is([type="checkbox"]):is([value="on"]),
@@ -52,5 +53,11 @@
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
     background:  color-mix(in srgb, SelectedItem 30%, transparent) !important;
     border: solid 1px SelectedItem !important;
+  }
+
+  .top-sites-list .top-site-outer .title .title-label, .fields-and-preview .top-site-outer .title .title-label {
+    font-style: italic !important;
+    color: white !important;
+    text-shadow: 1px 1px 2px black, 1px 1px 2px black !important;
   }
 }
