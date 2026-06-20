@@ -76,7 +76,6 @@ menuitem:hover:not([disabled]),
 }
 
 .urlbarView-button-menu:hover {
-  color: var(--button-text-color) !important;
   box-shadow: inset 0 0 0px 1px SelectedItem !important;
 }
 

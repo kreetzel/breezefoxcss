@@ -5,4 +5,5 @@
   --card-border-radius: 5px !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
+  --urlbarView-result-button-hover-color: var(--button-text-color) !important;
 }
