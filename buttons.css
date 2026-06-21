@@ -5,6 +5,8 @@
   --card-border-radius: 5px !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
+  --button-background-color-ghost-acitve: -moz-menuhover !important;
+  --button-background-color-ghost-active: -moz-menuhover !important;
   --urlbarView-result-button-hover-color: var(--button-text-color) !important;
   --toolbarbutton-background-color-hover: transparent !important;
   --toolbarbutton-outline-color-hover: SelectedItem !important;
