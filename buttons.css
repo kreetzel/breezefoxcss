@@ -6,4 +6,8 @@
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
   --urlbarView-result-button-hover-color: var(--button-text-color) !important;
+  --toolbarbutton-background-color-hover: transparent !important;
+  --toolbarbutton-outline-color-hover: SelectedItem !important;
+  --toolbarbutton-outline-color-active: SelectedItem !important;
+  --toolbarbutton-background-color-active: -moz-menuhover !important;
 }
