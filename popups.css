@@ -86,3 +86,9 @@ menuitem:hover:not([disabled]),
     border: solid 1px SelectedItem !important;
   }
 }
+
+.urlbarView-row[label] {
+  &::before {
+    margin-top: -6px !important;
+  }
+}
