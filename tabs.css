@@ -40,6 +40,12 @@
   background-color: #ff9eac !important;
 }
 
+.close-icon {
+  &:hover {
+    outline-color: transparent !important;
+  }
+}
+
 .tabbrowser-tab[selected="true"] .tab-close-button.close-icon:hover {
   color: var(--toolbar-background-color) !important;
 }
