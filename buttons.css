@@ -10,4 +10,5 @@
   --toolbarbutton-outline-color-hover: SelectedItem !important;
   --toolbarbutton-outline-color-active: SelectedItem !important;
   --toolbarbutton-background-color-active: -moz-menuhover !important;
+  --urlbar-box-background-color-hover: transparent !important;
 }
