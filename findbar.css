@@ -53,6 +53,18 @@
       }
     }
 
+    .close-icon.findbar-closebutton {
+      &:hover {
+        border: solid 1px SelectedItem !important;
+      }
+    }
+
+    .findbar-find-previous, .findbar-find-next {
+      &:not([disabled]):hover {
+        border: solid 1px SelectedItem !important;
+      }
+    }
+
     &[hidden] {
       transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
     }

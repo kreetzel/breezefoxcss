@@ -1,4 +1,5 @@
 :root {
+  --color-accent-primary: SelectedItem !important;
   --border-radius-medium: 5px !important;
   --arrowpanel-border-radius: 5px !important;
   --arrowpanel-menuitem-border-radius: 5px !important;
