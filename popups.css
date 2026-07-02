@@ -26,6 +26,7 @@ menuitem:hover:not([disabled]),
 .searchmode-switcher-panel-list {
   & > panel-item::part(button) {
     border: solid 1px transparent !important;
+    background: red !important;
   }
 }
 
@@ -92,3 +93,18 @@ menuitem:hover:not([disabled]),
     margin-top: -6px !important;
   }
 }
+
+menu, menuitem {
+  border: solid 1px transparent !important;
+  border-radius: 5px !important;
+}
+
+menu, menuitem {
+  &:where([_moz-menuactive]:not([disabled])) {
+    color: -moz-menuhovertext;
+    background-color: -moz-menuhover;
+    border: solid 1px SelectedItem !important;
+  }
+}
+
+
