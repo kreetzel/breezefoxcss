@@ -27,6 +27,20 @@
   [role="radio"]:hover:not([checked]) {
     border: solid 1px SelectedItem !important;
   }
+
+  .accessory-button:not([disabled]),
+  .button-background.labelled,
+  .select-wrapper,
+  .searchEngineAction:not([disabled]),
+  #restoreDefaultSearchEngines,
+  menulist {
+    box-shadow: 0 1px 0 var(--border-color) !important;
+  }
+
+  .accessory-button[disabled],
+  .searchEngineAction[disabled] {
+    border: var(--button-border) !important;
+  }
 }
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
