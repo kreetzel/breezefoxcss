@@ -50,6 +50,10 @@
   color: var(--toolbar-background-color) !important;
 }
 
+.tabbrowser-tab:not([selected="true"]) .tab-close-button.close-icon:hover {
+  color: color-mix(in srgb, var(--tab-background-color-hover), var(--toolbar-background-color)) !important;
+}
+
 [open] > .urlbar-background {
   border-radius: 5px !important;
 }
