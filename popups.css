@@ -26,7 +26,6 @@ menuitem:hover:not([disabled]),
 .searchmode-switcher-panel-list {
   & > panel-item::part(button) {
     border: solid 1px transparent !important;
-    background: red !important;
   }
 }
 
