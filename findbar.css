@@ -16,7 +16,10 @@
     margin: 0px !important;
 
     width: 90% !important;
-    max-width: calc(var(--theme-better_find_bar-textbox_width) * 1px);
+    /* Set by zen-better-findbar, which this is adapted from; undefined in plain
+       Firefox, where it would otherwise drop max-width entirely. 800 is that
+       mod's own default. */
+    max-width: calc(var(--theme-better_find_bar-textbox_width, 800) * 1px);
 
     height: auto !important;
 
