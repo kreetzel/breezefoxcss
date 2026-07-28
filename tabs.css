@@ -28,6 +28,22 @@
   box-shadow: none !important;
 }
 
+/* Breeze draws a thin rule between adjacent tabs. Firefox draws none of its own,
+   and the box-shadow reset above clears what separation the default theme had, so
+   a run of unselected tabs reads as one continuous strip. The rule sits on
+   .tab-background rather than the tab so it inherits the block margins and stays
+   inset from the toolbar edges, the way Breeze insets its separators. */
+.tabbrowser-tab:not([selected="true"]) .tab-background {
+  box-sizing: border-box !important;
+  border-inline-end: solid 1px var(--breeze-border-color) !important;
+}
+
+/* The selected tab carries a full 1px border already, so a separator immediately
+   before it would read as a doubled line. */
+.tabbrowser-tab:not([selected="true"]):has(+ .tabbrowser-tab[selected="true"]) .tab-background {
+  border-inline-end-color: transparent !important;
+}
+
 .tab-close-button {
   width: 16px !important;
   height: 16px !important;
