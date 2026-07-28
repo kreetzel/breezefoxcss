@@ -12,7 +12,7 @@
   findbar {
     display: flex !important;
 
-    border-radius: 5px !important;
+    border-radius: var(--breeze-radius) !important;
     margin: 0px !important;
 
     width: 90% !important;

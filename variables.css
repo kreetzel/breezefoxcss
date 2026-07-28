@@ -1,0 +1,15 @@
+/* Shared tunables, so the values repeated across the other files can be
+   adjusted in one place.
+
+   These are chrome-side only. userContent.css styles content documents
+   (about:home, about:preferences), which do not inherit custom properties
+   from the browser chrome, so its radius values are still written out. */
+:root {
+  /* Breeze 6 widget corner radius. */
+  --breeze-radius: 5px;
+
+  /* The 1px frame Breeze draws around tabs, the toolbox and the content area.
+     Derived from the toolbox background so it tracks the active colour scheme
+     rather than assuming light or dark. */
+  --breeze-border-color: color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%);
+}

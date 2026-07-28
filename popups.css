@@ -4,7 +4,7 @@ richlistitem,
 .urlbarView-row-inner,
 #downloadsHistory {
   border: solid 1px transparent !important;
-  border-radius: 5px !important;
+  border-radius: var(--breeze-radius) !important;
 }
 
 .downloadButton:hover,
@@ -95,7 +95,7 @@ menuitem:hover:not([disabled]),
 
 menu, menuitem {
   border: solid 1px transparent !important;
-  border-radius: 5px !important;
+  border-radius: var(--breeze-radius) !important;
 }
 
 menu, menuitem {

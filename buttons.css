@@ -1,9 +1,9 @@
 :root {
   --color-accent-primary: SelectedItem !important;
-  --border-radius-medium: 5px !important;
-  --arrowpanel-border-radius: 5px !important;
-  --arrowpanel-menuitem-border-radius: 5px !important;
-  --card-border-radius: 5px !important;
+  --border-radius-medium: var(--breeze-radius) !important;
+  --arrowpanel-border-radius: var(--breeze-radius) !important;
+  --arrowpanel-menuitem-border-radius: var(--breeze-radius) !important;
+  --card-border-radius: var(--breeze-radius) !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
   --button-background-color-ghost-active: -moz-menuhover !important;
