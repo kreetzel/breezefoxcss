@@ -12,4 +12,8 @@
      Derived from the toolbox background so it tracks the active colour scheme
      rather than assuming light or dark. */
   --breeze-border-color: color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%);
+
+  /* Breeze ForegroundNegative, rgb(218,68,83). Identical in Breeze Light and
+     Breeze Dark, and Firefox exposes no system colour for "destructive". */
+  --breeze-negative: #da4453;
 }
