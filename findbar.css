@@ -32,7 +32,7 @@
 
     overflow: unset !important;
 
-    background: var(--toolbar-background-color) !important;
+    background: var(--breeze-toolbar-background) !important;
     border: 1px solid var(--chrome-content-separator-color) !important;
 
     transition: transform 0.35s ease !important;

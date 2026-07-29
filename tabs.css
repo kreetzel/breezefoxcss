@@ -14,12 +14,12 @@
 
 .tabbrowser-tab[selected="true"] {
   .tab-background {
-    background-color: var(--toolbar-background-color) !important;
+    background-color: var(--breeze-toolbar-background) !important;
     border: solid 1px var(--breeze-border-color) !important;
   }
 
   .tab-content {
-    color: var(--toolbar-color) !important;
+    color: var(--breeze-toolbar-text) !important;
   }
 }
 
