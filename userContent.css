@@ -2,7 +2,7 @@
   :root {
     --color-accent-primary: SelectedItem !important;
     --button-background-color: transparent !important;
-    --button-background-color-hover: rgba(currentColor) !important;
+    --button-background-color-hover: color-mix(in srgb, currentColor 15%, transparent) !important;
     --button-border-color-hover: SelectedItem !important;
     --button-border: solid 1px var(--border-color) !important;
     --button-border-radius: 5px !important;
@@ -46,8 +46,8 @@
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
   :root {
-    --newtab-background-card: var(--color-white) !important;
-    --newtab-weather-background-color: var(--color-white) !important;
+    --newtab-background-card: light-dark(var(--color-white), var(--newtab-background-color-secondary)) !important;
+    --newtab-weather-background-color: light-dark(var(--color-white), var(--newtab-background-color-secondary)) !important;
     /*--newtab-background-color: SelectedItem !important;*/
   }
 
@@ -72,8 +72,7 @@
 
   .top-sites-list .top-site-outer .title .title-label, .fields-and-preview .top-site-outer .title .title-label {
     font-style: italic !important;
-    color: white !important;
-    text-shadow: 1px 1px 2px black, 1px 1px 2px black !important;
+    color: var(--newtab-text-primary-color) !important;
   }
 
   .button-background {

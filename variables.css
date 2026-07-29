@@ -1,0 +1,40 @@
+/* Shared tunables, so the values repeated across the other files can be
+   adjusted in one place.
+
+   These are chrome-side only. userContent.css styles content documents
+   (about:home, about:preferences), which do not inherit custom properties
+   from the browser chrome, so its radius values are still written out. */
+:root {
+  /* Breeze 6 widget corner radius. */
+  --breeze-radius: 5px;
+
+  /* Firefox 152 renamed the toolbar and toolbox colour tokens (bug 2034495):
+     --toolbox-bgcolor -> --toolbox-background-color, --toolbar-bgcolor ->
+     --toolbar-background-color, --toolbar-color -> --toolbar-text-color.
+     ESR 140 and anything built from it (IceCat, older distro packages) still
+     use the old names, and an unresolved var() invalidates the whole
+     declaration, so reading a renamed token directly drops the rule outright
+     there — no border, no background, silently.
+
+     var()'s fallback only applies when the name is undefined, which is exactly
+     the case on either side of the rename, so one chain covers both.
+
+     The last link matters on Linux specifically: 140 only declares
+     --toolbar-bgcolor / --toolbar-color behind
+     `@media not -moz-pref("browser.theme.native-theme")`, and that pref
+     defaults to true on GTK, so neither is defined on a stock Linux 140. The
+     terminal values are the ones 152+ resolves to in the same situation
+     (tokens-platform.css), so this matches rather than approximates it. */
+  --breeze-toolbox-background: var(--toolbox-background-color, var(--toolbox-bgcolor, -moz-headerbar));
+  --breeze-toolbar-background: var(--toolbar-background-color, var(--toolbar-bgcolor, color-mix(in srgb, -moz-dialog 85%, white)));
+  --breeze-toolbar-text: var(--toolbar-text-color, var(--toolbar-color, -moz-dialogtext));
+
+  /* The 1px frame Breeze draws around tabs, the toolbox and the content area.
+     Derived from the toolbox background so it tracks the active colour scheme
+     rather than assuming light or dark. */
+  --breeze-border-color: color-mix(in srgb, var(--breeze-toolbox-background), light-dark(black, white) 30%);
+
+  /* Breeze ForegroundNegative, rgb(218,68,83). Identical in Breeze Light and
+     Breeze Dark, and Firefox exposes no system colour for "destructive". */
+  --breeze-negative: #da4453;
+}

@@ -14,18 +14,34 @@
 
 .tabbrowser-tab[selected="true"] {
   .tab-background {
-    background-color: var(--toolbar-background-color) !important;
-    border: solid 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
+    background-color: var(--breeze-toolbar-background) !important;
+    border: solid 1px var(--breeze-border-color) !important;
   }
 
   .tab-content {
-    color: var(--toolbar-color) !important;
+    color: var(--breeze-toolbar-text) !important;
   }
 }
 
 .tab-background {
   height: 100% !important;
   box-shadow: none !important;
+}
+
+/* Breeze draws a thin rule between adjacent tabs. Firefox draws none of its own,
+   and the box-shadow reset above clears what separation the default theme had, so
+   a run of unselected tabs reads as one continuous strip. The rule sits on
+   .tab-background rather than the tab so it inherits the block margins and stays
+   inset from the toolbar edges, the way Breeze insets its separators. */
+.tabbrowser-tab:not([selected="true"]) .tab-background {
+  box-sizing: border-box !important;
+  border-inline-end: solid 1px var(--breeze-border-color) !important;
+}
+
+/* The selected tab carries a full 1px border already, so a separator immediately
+   before it would read as a doubled line. */
+.tabbrowser-tab:not([selected="true"]):has(+ .tabbrowser-tab[selected="true"]) .tab-background {
+  border-inline-end-color: transparent !important;
 }
 
 .tab-close-button {
@@ -37,7 +53,8 @@
 }
 
 .tab-close-button.close-icon:hover {
-  background-color: #ff9eac !important;
+  background-color: var(--breeze-negative) !important;
+  color: white !important;
 }
 
 .close-icon {
@@ -46,29 +63,21 @@
   }
 }
 
-.tabbrowser-tab[selected="true"] .tab-close-button.close-icon:hover {
-  color: var(--toolbar-background-color) !important;
-}
-
-.tabbrowser-tab:not([selected="true"]) .tab-close-button.close-icon:hover {
-  color: color-mix(in srgb, var(--tab-background-color-hover), var(--toolbar-background-color)) !important;
-}
-
 [open] > .urlbar-background {
-  border-radius: 5px !important;
+  border-radius: var(--breeze-radius) !important;
 }
 
 #TabsToolbar {
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
+  box-shadow: inset 0 0 0 1px var(--breeze-border-color) !important;
 }
 
 #nav-bar {
-  border-left: solid 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
-  border-right: solid 1px color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%) !important;
+  border-left: solid 1px var(--breeze-border-color) !important;
+  border-right: solid 1px var(--breeze-border-color) !important;
 }
 
 #browser {
-  border: 1px solid color-mix(in srgb, var(--toolbox-background-color), light-dark(black, white) 30%)  !important;
+  border: 1px solid var(--breeze-border-color)  !important;
   border-top: none !important;
 }
 

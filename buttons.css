@@ -1,12 +1,19 @@
 :root {
   --color-accent-primary: SelectedItem !important;
-  --border-radius-medium: 5px !important;
-  --arrowpanel-border-radius: 5px !important;
-  --arrowpanel-menuitem-border-radius: 5px !important;
-  --card-border-radius: 5px !important;
+  --border-radius-medium: var(--breeze-radius) !important;
+  --card-border-radius: var(--breeze-radius) !important;
+
+  /* Firefox 152 renamed --arrowpanel-* to --panel-* (bug 2019097). Setting a
+     variable the build doesn't define is inert, so both names are set rather
+     than picking one: --panel-* is what 152+ reads, --arrowpanel-* is what
+     ESR 140 reads. Same pattern for the toolbarbutton and urlbar-box tokens
+     below, renamed by bug 2034495. */
+  --panel-border-radius: var(--breeze-radius) !important;
+  --panel-menuitem-border-radius: var(--breeze-radius) !important;
+  --arrowpanel-border-radius: var(--breeze-radius) !important;
+  --arrowpanel-menuitem-border-radius: var(--breeze-radius) !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
-  --button-background-color-ghost-acitve: -moz-menuhover !important;
   --button-background-color-ghost-active: -moz-menuhover !important;
   --urlbarView-result-button-hover-color: var(--button-text-color) !important;
   --toolbarbutton-background-color-hover: transparent !important;
@@ -15,4 +22,12 @@
   --toolbarbutton-background-color-active: -moz-menuhover !important;
   --urlbar-box-background-color-hover: transparent !important;
   --urlbar-box-background-color-active: -moz-menuhover !important;
+
+  /* Pre-152 names for the six above. */
+  --toolbarbutton-hover-background: transparent !important;
+  --toolbarbutton-hover-outline-color: SelectedItem !important;
+  --toolbarbutton-active-outline-color: SelectedItem !important;
+  --toolbarbutton-active-background: -moz-menuhover !important;
+  --urlbar-box-hover-bgcolor: transparent !important;
+  --urlbar-box-active-bgcolor: -moz-menuhover !important;
 }
