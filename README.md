@@ -22,6 +22,18 @@ Firefox `userChrome.css` made to match KDE's Breeze theming.
 - Restart Firefox
 - Profit
 
+### Firefox versions
+
+Works on **Firefox 140 ESR and newer**, including ESR-based builds such as GNU
+IceCat. Firefox 152 renamed the chrome colour tokens the theme reads
+(`--toolbar-bgcolor` → `--toolbar-background-color` and friends, [bug 2034495]),
+so the files read both spellings — an unresolved `var()` drops the whole
+declaration rather than falling back, which on an older build meant borders and
+backgrounds silently disappearing rather than looking merely wrong. Anything
+older than 140 is untested.
+
+[bug 2034495]: https://bugzilla.mozilla.org/show_bug.cgi?id=2034495
+
 ### A note on colors
 
 The theme styles with CSS system colors (`SelectedItem`, `-moz-menuhover`) rather
