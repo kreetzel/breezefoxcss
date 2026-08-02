@@ -56,8 +56,8 @@
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
   :root {
-    --newtab-background-card: var(--color-white) !important;
-    --newtab-weather-background-color: var(--color-white) !important;
+    --newtab-background-card: var(--newtab-background-color-secondary) !important;
+    --newtab-weather-background-color: var(--newtab-background-color-secondary) !important;
     --col-width: 90px !important;
     --newtab-wordmark-color: light-dark(var(--color-black), var(--color-white)) !important;
     /*--newtab-background-color: SelectedItem !important;*/
