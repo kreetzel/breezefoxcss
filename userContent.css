@@ -6,6 +6,9 @@
     --button-border-color-hover: SelectedItem !important;
     --button-border: solid 1px var(--border-color) !important;
     --button-border-color-disabled: var(--border-color) !important;
+    --button-border-color-primary: var(--border-color) !important;
+    --button-text-color-primary: light-dark(var(--color-black), var(--color-white)) !important;
+    --button-border-color-primary-hover: SelectedItem !important;
     --button-border-radius: 5px !important;
     --border-radius-medium: 5px !important;
     --border-radius-large: 5px !important;
