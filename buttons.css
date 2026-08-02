@@ -11,6 +11,7 @@
   --urlbar-border-radius: 5px !important;
   --urlbarview-border-radius: 5px !important;
   --urlbar-inner-border-radius: 3px !important;
+  --urlbarView-padding: 3px !important;
   --button-border-radius: 3px !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
