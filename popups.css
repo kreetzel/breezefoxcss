@@ -115,3 +115,7 @@ menu, menuitem {
     border: solid 1px SelectedItem !important;
   }
 }
+
+#downloadsPanel-blockedSubview, #downloadsPanel-mainView {
+  padding: 3px !important;
+}
