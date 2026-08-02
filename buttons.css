@@ -4,6 +4,14 @@
   --arrowpanel-border-radius: 5px !important;
   --arrowpanel-menuitem-border-radius: 5px !important;
   --card-border-radius: 5px !important;
+  --panel-border-radius: 5px !important;
+  --panel-padding-block: 3px !important;
+  --panel-menuitem-border-radius: 5px !important;
+  --toolbarbutton-border-radius: 5px !important;
+  --urlbar-border-radius: 5px !important;
+  --urlbarview-border-radius: 5px !important;
+  --urlbar-inner-border-radius: 3px !important;
+  --button-border-radius: 3px !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
   --button-background-color-ghost-acitve: -moz-menuhover !important;

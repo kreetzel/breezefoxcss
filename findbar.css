@@ -37,6 +37,14 @@
     visibility: visible !important;
     opacity: 1 !important;
 
+  .findbar-textbox {
+    &:focus {
+      border: solid 1px SelectedItem !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
+
     & .findbar-container {
       flex-wrap: wrap;
       overflow-x: auto !important;
