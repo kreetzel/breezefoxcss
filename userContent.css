@@ -5,9 +5,12 @@
     --button-background-color-hover: rgba(currentColor) !important;
     --button-border-color-hover: SelectedItem !important;
     --button-border: solid 1px var(--border-color) !important;
+    --button-border-color-disabled: var(--border-color) !important;
     --button-border-radius: 5px !important;
     --border-radius-medium: 5px !important;
     --border-radius-large: 5px !important;
+    --border-radius-xlarge: 5px !important;
+    --border-radius-xxlarge: 5px !important;
     --content-search-handoff-ui-border-radius: 5px !important;
     --color-accent-primary-hover: -moz-menuhover !important;
     --button-background-color-primary-hover: -moz-menuhover !important;
@@ -16,6 +19,8 @@
     --color-accent-primary-selected: SelectedItem !important;
     --button-background-color-primary: SelectedItem !important;
     --button-font-weight: normal !important;
+    --card-box-shadow: none !important;
+    --card-border-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)) !important;
     --color-gray-0: #fbfbfb !important;
   }
 

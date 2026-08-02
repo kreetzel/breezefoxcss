@@ -33,6 +33,14 @@ menuitem:hover:not([disabled]),
   }
 }
 
+.searchmode-switcher-panel-list {
+  & > panel-item::part(button) {
+    &:not(:hover) {
+      border: solid 1px transparent !important;
+    }
+  }
+}
+
 .moz-button-subviewbutton-nav {
   &::part(button) {
     border: solid 1px transparent !important;
@@ -107,5 +115,3 @@ menu, menuitem {
     border: solid 1px SelectedItem !important;
   }
 }
-
-
