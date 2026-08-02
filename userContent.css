@@ -4,6 +4,8 @@
     --button-background-color: transparent !important;
     --button-background-color-hover: rgba(currentColor) !important;
     --button-border-color-hover: SelectedItem !important;
+    --button-border-color-ghost: var(--border-color) !important;
+    --button-border-color-ghost-hover: SelectedItem !important;
     --button-border: solid 1px var(--border-color) !important;
     --button-border-color-disabled: var(--border-color) !important;
     --button-border-color-primary: var(--border-color) !important;
@@ -56,6 +58,8 @@
   :root {
     --newtab-background-card: var(--color-white) !important;
     --newtab-weather-background-color: var(--color-white) !important;
+    --col-width: 90px !important;
+    --newtab-wordmark-color: light-dark(var(--color-black), var(--color-white)) !important;
     /*--newtab-background-color: SelectedItem !important;*/
   }
 
@@ -84,7 +88,21 @@
     text-shadow: 1px 1px 2px black, 1px 1px 2px black !important;
   }
 
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) .tile {
+    box-shadow: none !important;
+  }
+
   .button-background {
     background: var(--newtab-background-color-secondary) !important;
+  }
+
+  .search-handoff-button {
+    box-shadow: none !important;
+    --content-search-handoff-ui-unfocused-border-color: var(--border-color) !important;
+  }
+
+  .nova-enabled .top-site-outer:is(:hover, :focus-within, .active) .tile {
+    height: calc(var(--size-item-large) * 2) !important;
+    width: calc(var(--size-item-large) * 2) !important;
   }
 }
