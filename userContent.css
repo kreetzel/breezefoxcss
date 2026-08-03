@@ -68,12 +68,13 @@
 
   button[role="tab"]:hover {
     border: solid 1px SelectedItem !important;
+    background-color: -moz-menuhover !important;
   }
 
   button[role="tab"] {
     &[selected] {
-      color: FieldText !important;
-      background-color: -moz-menuhover !important;
+      color: light-dark(var(--color-white), var(--color-black)) !important;
+      background-color: SelectedItem !important;
       border: solid 1px SelectedItem !important;
     }
   }
