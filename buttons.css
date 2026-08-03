@@ -12,11 +12,14 @@
   --urlbarview-border-radius: 5px !important;
   --urlbar-inner-border-radius: 3px !important;
   --urlbarView-padding: 4px !important;
+  --urlbarview-text-color-selected: FieldText !important;
   --button-border-radius: 3px !important;
   --border-radius-large: 5px !important;
   --border-radius-xlarge: 5px !important;
   --border-radius-xxlarge: 5px !important;
   --panel-menuitem-margin-inline: 3px !important;
+  --chrome-window-gap: 2px !important;
+  --chrome-block-radius: 5px !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
   --button-background-color-ghost-acitve: -moz-menuhover !important;
