@@ -13,14 +13,10 @@
   margin-inline-start: 0 !important;
 }
 
-.tabbrowser-tab[selected="true"] {
-  .tab-background {
+.tab-background {
+  &:is([selected], [multiselected]) {
     background-color: var(--toolbar-background-color) !important;
     border: solid 1px var(--tabs-navbar-separator-color) !important;
-  }
-
-  .tab-content {
-    color: var(--toolbar-color) !important;
   }
 }
 
@@ -81,6 +77,24 @@
   :root:not([inFullscreen], [inDOMFullscreen]) #browser {
     :root[uidensity="compact"] & {
       padding-block-start: 0 !important;
+    }
+  }
+}
+
+@media -moz-pref("browser.nova.enabled") {
+  #tabbrowser-tabpanels > :not(.split-view-panel) .browserContainer {
+  @media not -moz-pref("sidebar.verticalTabs") {
+    :root[uidensity="compact"] #sidebar-container[hidden] ~ #tabbrowser-tabbox & {
+      border-radius: 0 0 5px 5px !important;
+    }
+  }
+  }
+}
+
+@media -moz-pref("browser.nova.enabled") {
+  .chrome-block {
+    :root[uidensity="compact"] &:not(#sidebar-container) {
+      border-radius: 5px 5px 0 0 !important;
     }
   }
 }
