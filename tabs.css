@@ -77,4 +77,10 @@
   margin-left: 4px !important;
 }
 
-
+@media -moz-pref("browser.nova.enabled") {
+  :root:not([inFullscreen], [inDOMFullscreen]) #browser {
+    :root[uidensity="compact"] & {
+      padding-block-start: 0px !important;
+    }
+  }
+}
