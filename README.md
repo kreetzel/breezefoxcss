@@ -13,19 +13,37 @@ Firefox `userChrome.css` made to match KDE's Breeze theming.
 
 ## How to
 
+Find your profile folder via `about:profiles` → **Root Directory**. Two things go
+in different places:
+
+```
+<profile>/
+├── user.js          <- the prefs
+└── chrome/          <- create this if it doesn't exist
+    ├── userChrome.css
+    ├── userContent.css
+    └── ... the rest of the .css files
+```
+
 - Set Firefox's theme to **System theme — auto**
-- In `about:config`, enable:
-  - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `browser.compactmode.show`
-  - `widget.gtk.rounded-bottom-corners.enabled` *(optional)*
-- In `about:config`, set:
-  - `browser.uidensity` to `1` (compact — the theme assumes it)
-  - `widget.use-xdg-desktop-portal.file-picker` to `1` (KDE file dialogs; already
-    implicit if you run Firefox as a Flatpak)
-- Put all the files into the `chrome` folder inside your browser profile folder,
-  creating it if it doesn't exist
+- Copy the `.css` files into `<profile>/chrome/`
+- Copy `user.js` into `<profile>/` itself — **not** into `chrome/`
 - Restart Firefox
 - Profit
+
+`user.js` sets the prefs the theme needs, re-applying them on every start. If you
+would rather set them by hand and skip the file, the equivalent in `about:config` is:
+
+- Enable `toolkit.legacyUserProfileCustomizations.stylesheets` (without this the CSS
+  is never loaded at all)
+- Enable `browser.compactmode.show`
+- Enable `widget.gtk.rounded-bottom-corners.enabled` *(optional)*
+- Set `browser.uidensity` to `1` (compact — the theme assumes it)
+- Set `widget.use-xdg-desktop-portal.file-picker` to `1` (KDE file dialogs; already
+  implicit if you run Firefox as a Flatpak)
+
+The file carries a few more than that, each commented inline — see
+[Going further](#going-further-matching-plasma-beyond-the-chrome) for the reasoning.
 
 ### Firefox versions
 
@@ -61,7 +79,7 @@ browser closer to a native Qt app:
 
 | Pref | Value | Effect |
 |---|---|---|
-| `widget.gtk.native-context-menus` | `true` | Context menus drawn by GTK (i.e. by Breeze) instead of by Firefox |
+| `widget.gtk.native-context-menus` | `false` | Firefox's default. Leave it alone — setting it `true` was observed to break context menus outright. See below |
 | `widget.gtk.overlay-scrollbars.enabled` | `false` | Breeze scrollbars are always-visible, not GNOME-style overlay |
 
 **Already correct by default on Firefox 153** — listed only so you don't waste time
@@ -88,10 +106,23 @@ So native and CSS-drawn menus look nearly identical either way.
 
 What Breeze-GTK does *not* specify is a `border-radius` on `menu` itself, so popups
 have square corners while Plasma 6's Qt menus are rounded and blurred. That gap is in
-`breeze-gtk`, not Firefox, and it affects every GTK app on the system. If you want
-Plasma 6's rounded corners specifically, set `widget.gtk.native-context-menus` to
-`false` and style `menupopup` in CSS instead — at the cost of hand-maintaining it, and
-some tuning to stop the drop shadow rendering square on Wayland.
+`breeze-gtk`, not Firefox, and it affects every GTK app on the system.
+
+None of which matters much in practice, because **enabling it is not recommended.**
+On the setup this theme is developed against — Firefox 153, Flatpak, Plasma 6 — setting
+`widget.gtk.native-context-menus` to `true` left context menus visually correct but
+functionally dead: GTK draws the menu, but clicking an entry never fires its
+`oncommand`, so nothing happens. If your context menus have stopped responding, this
+pref is the first thing to check. It is `false` by default; the shipped `user.js`
+pins it there.
+
+Keeping it `false` is also what makes the `menu, menuitem` rules in `popups.css` do
+anything at all — they style XUL popups, so with GTK drawing the menus they would be
+dead code.
+
+The tradeoff is the popup container: `menupopup` is not styled here, so a menu's outer
+corners stay square either way. Styling it is possible, but needs some tuning to stop
+the drop shadow rendering square on Wayland.
 
 ### plasma-browser-integration under Flatpak
 
