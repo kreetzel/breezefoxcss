@@ -1,5 +1,6 @@
 :root {
   --toolbar-field-border-color: var(--chrome-content-separator-color) !important;
+  --tab-border-radius: 5px !important;
 }
 
 .titlebar-spacer {
@@ -12,15 +13,17 @@
   margin-inline-start: 0 !important;
 }
 
-.tabbrowser-tab[selected="true"] {
-  .tab-background {
+/* Upstream's :is([selected], [multiselected]) also covers multiselected tabs;
+   the colours stay on the breeze-* chain so ESR 140 keeps resolving them. */
+.tab-background {
+  &:is([selected], [multiselected]) {
     background-color: var(--breeze-toolbar-background) !important;
     border: solid 1px var(--breeze-border-color) !important;
   }
+}
 
-  .tab-content {
-    color: var(--breeze-toolbar-text) !important;
-  }
+.tabbrowser-tab:is([selected], [multiselected]) .tab-content {
+  color: var(--breeze-toolbar-text) !important;
 }
 
 .tab-background {
@@ -68,6 +71,9 @@
 }
 
 #TabsToolbar {
+  /* Breeze frames the whole toolbox rather than drawing a single separator
+     under it, so this keeps the 4-sided inset frame instead of upstream's
+     `inset 0 -1px 0 0`; the side borders below complete it. */
   box-shadow: inset 0 0 0 1px var(--breeze-border-color) !important;
 }
 
@@ -77,7 +83,7 @@
 }
 
 #browser {
-  border: 1px solid var(--breeze-border-color)  !important;
+  border: 1px solid var(--breeze-border-color) !important;
   border-top: none !important;
 }
 
@@ -91,4 +97,28 @@
   margin-left: 4px !important;
 }
 
+@media -moz-pref("browser.nova.enabled") {
+  :root:not([inFullscreen], [inDOMFullscreen]) #browser {
+    :root[uidensity="compact"] & {
+      padding-block-start: 0 !important;
+    }
+  }
+}
 
+@media -moz-pref("browser.nova.enabled") {
+  #tabbrowser-tabpanels > :not(.split-view-panel) .browserContainer {
+  @media not -moz-pref("sidebar.verticalTabs") {
+    :root[uidensity="compact"] #sidebar-container[hidden] ~ #tabbrowser-tabbox & {
+      border-radius: 0 0 5px 5px !important;
+    }
+  }
+  }
+}
+
+@media -moz-pref("browser.nova.enabled") {
+  .chrome-block {
+    :root[uidensity="compact"] &:not(#sidebar-container) {
+      border-radius: 5px 5px 0 0 !important;
+    }
+  }
+}

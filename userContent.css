@@ -4,10 +4,18 @@
     --button-background-color: transparent !important;
     --button-background-color-hover: color-mix(in srgb, currentColor 15%, transparent) !important;
     --button-border-color-hover: SelectedItem !important;
+    --button-border-color-ghost: var(--border-color) !important;
+    --button-border-color-ghost-hover: SelectedItem !important;
     --button-border: solid 1px var(--border-color) !important;
+    --button-border-color-disabled: var(--border-color) !important;
+    --button-border-color-primary: var(--border-color) !important;
+    --button-text-color-primary: light-dark(var(--color-black), var(--color-white)) !important;
+    --button-border-color-primary-hover: SelectedItem !important;
     --button-border-radius: 5px !important;
     --border-radius-medium: 5px !important;
     --border-radius-large: 5px !important;
+    --border-radius-xlarge: 5px !important;
+    --border-radius-xxlarge: 5px !important;
     --content-search-handoff-ui-border-radius: 5px !important;
     --color-accent-primary-hover: -moz-menuhover !important;
     --button-background-color-primary-hover: -moz-menuhover !important;
@@ -16,7 +24,10 @@
     --color-accent-primary-selected: SelectedItem !important;
     --button-background-color-primary: SelectedItem !important;
     --button-font-weight: normal !important;
+    --card-box-shadow: none !important;
+    --card-border-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)) !important;
     --color-gray-0: #fbfbfb !important;
+    --color-gray-05: #fbfbfb !important;
   }
 
   #input:is([type="checkbox"]):is([value="on"]),
@@ -42,12 +53,46 @@
   .searchEngineAction[disabled] {
     border: var(--button-border) !important;
   }
+
+  button {
+    &[selected] {
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+
+  button[role="tab"],
+  .moz-page-nav-link {
+      font-weight: normal !important;
+      border: solid 1px transparent !important;
+      --page-nav-button-border-radius: 5px !important;
+  }
+
+  button[role="tab"]:hover {
+    border: solid 1px SelectedItem !important;
+    background-color: -moz-menuhover !important;
+  }
+
+  button[role="tab"] {
+    &[selected] {
+      color: light-dark(var(--color-white), var(--color-black)) !important;
+      background-color: SelectedItem !important;
+      border: solid 1px SelectedItem !important;
+    }
+  }
 }
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
   :root {
+    /* light-dark() rather than upstream's flat --newtab-background-color-secondary:
+       that token is a light grey in light mode, so collapsing both arms would
+       also restyle light mode. Keeping white on the light side preserves the
+       original card look and still fixes the dark-mode case. */
     --newtab-background-card: light-dark(var(--color-white), var(--newtab-background-color-secondary)) !important;
     --newtab-weather-background-color: light-dark(var(--color-white), var(--newtab-background-color-secondary)) !important;
+    --col-width: 90px !important;
+    --newtab-wordmark-color: light-dark(var(--color-black), var(--color-white)) !important;
     /*--newtab-background-color: SelectedItem !important;*/
   }
 
@@ -75,7 +120,21 @@
     color: var(--newtab-text-primary-color) !important;
   }
 
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) .tile {
+    box-shadow: none !important;
+  }
+
   .button-background {
     background: var(--newtab-background-color-secondary) !important;
+  }
+
+  .search-handoff-button {
+    box-shadow: none !important;
+    --content-search-handoff-ui-unfocused-border-color: var(--border-color) !important;
+  }
+
+  .nova-enabled .top-site-outer:is(:hover, :focus-within, .active) .tile {
+    height: calc(var(--size-item-large) * 2) !important;
+    width: calc(var(--size-item-large) * 2) !important;
   }
 }

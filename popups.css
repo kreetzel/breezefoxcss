@@ -25,16 +25,18 @@ menuitem:hover:not([disabled]),
 
 .searchmode-switcher-panel-list {
   & > panel-item::part(button) {
-    border: solid 1px transparent !important;
+    &:hover {
+      color: -moz-menuhovertext !important;
+      background-color: -moz-menuhover !important;;
+      border: solid 1px SelectedItem !important;
+    }
   }
 }
 
 .searchmode-switcher-panel-list {
   & > panel-item::part(button) {
-    &:hover {
-      color: -moz-menuhovertext !important;
-      background-color: -moz-menuhover !important;;
-      border: solid 1px SelectedItem !important;
+    &:not(:hover) {
+      border: solid 1px transparent !important;
     }
   }
 }
@@ -53,17 +55,6 @@ menuitem:hover:not([disabled]),
       border: solid 1px SelectedItem !important;
     }
   }
-}
-
-.urlbarView-row {
-  margin-left: 2px !important;
-  margin-right: 2px !important;
-}
-
-.urlbarView-row:hover:not([selected]) {
-  color: -moz-menuhovertext !important;
-  background-color: -moz-menuhover !important;;
-  border: solid 1px SelectedItem !important;
 }
 
 .urlbarView-action-btn {
@@ -79,6 +70,24 @@ menuitem:hover:not([disabled]),
   box-shadow: inset 0 0 0px 1px SelectedItem !important;
 }
 
+.urlbarView-row {
+  background: transparent !important;
+}
+
+.urlbarView-row-inner:hover {
+  border: solid 1px SelectedItem !important;
+}
+
+.urlbarView-row-inner[selected] {
+  color: FieldText !important;
+  background-color: -moz-menuhover !important;
+  border: solid 1px SelectedItem !important;
+}
+
+.urlbar-background {
+  border: 1px solid var(--panel-border-color) !important;
+}
+
 .unified-extensions-item-menu-button.subviewbutton {
   &:hover > .toolbarbutton-icon {
     color: -moz-menuhovertext !important;
@@ -90,6 +99,7 @@ menuitem:hover:not([disabled]),
 .urlbarView-row[label] {
   &::before {
     margin-top: -6px !important;
+    margin-left: 5px !important;
   }
 }
 
@@ -106,4 +116,6 @@ menu, menuitem {
   }
 }
 
-
+#downloadsPanel-blockedSubview, #downloadsPanel-mainView {
+  padding: 3px !important;
+}

@@ -1,7 +1,22 @@
 :root {
   --color-accent-primary: SelectedItem !important;
+  /* Breeze 6 widget radius, via variables.css. The 2-4px values below are
+     inner/padding metrics rather than the widget radius, so they stay literal. */
   --border-radius-medium: var(--breeze-radius) !important;
+  --border-radius-large: var(--breeze-radius) !important;
+  --border-radius-xlarge: var(--breeze-radius) !important;
+  --border-radius-xxlarge: var(--breeze-radius) !important;
   --card-border-radius: var(--breeze-radius) !important;
+  --toolbarbutton-border-radius: var(--breeze-radius) !important;
+  --urlbar-border-radius: var(--breeze-radius) !important;
+  --urlbarview-border-radius: var(--breeze-radius) !important;
+  --chrome-block-radius: var(--breeze-radius) !important;
+
+  --urlbar-inner-border-radius: 3px !important;
+  --urlbarView-padding: 4px !important;
+  --urlbarview-text-color-selected: FieldText !important;
+  --button-border-radius: 3px !important;
+  --chrome-window-gap: 2px !important;
 
   /* Firefox 152 renamed --arrowpanel-* to --panel-* (bug 2019097). Setting a
      variable the build doesn't define is inert, so both names are set rather
@@ -10,6 +25,8 @@
      below, renamed by bug 2034495. */
   --panel-border-radius: var(--breeze-radius) !important;
   --panel-menuitem-border-radius: var(--breeze-radius) !important;
+  --panel-padding-block: 3px !important;
+  --panel-menuitem-margin-inline: 3px !important;
   --arrowpanel-border-radius: var(--breeze-radius) !important;
   --arrowpanel-menuitem-border-radius: var(--breeze-radius) !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;

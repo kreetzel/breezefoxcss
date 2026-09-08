@@ -2,9 +2,14 @@
 
 Firefox `userChrome.css` made to match KDE's Breeze theming.
 
+- Nova and pre-redesign UI support
+- Light and dark mode support
+- Firefox theme support
+
 ## Screenshots
 
-![image](screen.png)
+![image](screen1.png)
+![image](screen2.png)
 
 ## How to
 
