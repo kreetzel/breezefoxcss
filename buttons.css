@@ -1,28 +1,36 @@
 :root {
   --color-accent-primary: SelectedItem !important;
-  --border-radius-medium: 5px !important;
-  --arrowpanel-border-radius: 5px !important;
-  --arrowpanel-menuitem-border-radius: 5px !important;
-  --card-border-radius: 5px !important;
-  --panel-border-radius: 5px !important;
-  --panel-padding-block: 3px !important;
-  --panel-menuitem-border-radius: 5px !important;
-  --toolbarbutton-border-radius: 5px !important;
-  --urlbar-border-radius: 5px !important;
-  --urlbarview-border-radius: 5px !important;
+  /* Breeze 6 widget radius, via variables.css. The 2-4px values below are
+     inner/padding metrics rather than the widget radius, so they stay literal. */
+  --border-radius-medium: var(--breeze-radius) !important;
+  --border-radius-large: var(--breeze-radius) !important;
+  --border-radius-xlarge: var(--breeze-radius) !important;
+  --border-radius-xxlarge: var(--breeze-radius) !important;
+  --card-border-radius: var(--breeze-radius) !important;
+  --toolbarbutton-border-radius: var(--breeze-radius) !important;
+  --urlbar-border-radius: var(--breeze-radius) !important;
+  --urlbarview-border-radius: var(--breeze-radius) !important;
+  --chrome-block-radius: var(--breeze-radius) !important;
+
   --urlbar-inner-border-radius: 3px !important;
   --urlbarView-padding: 4px !important;
   --urlbarview-text-color-selected: FieldText !important;
   --button-border-radius: 3px !important;
-  --border-radius-large: 5px !important;
-  --border-radius-xlarge: 5px !important;
-  --border-radius-xxlarge: 5px !important;
-  --panel-menuitem-margin-inline: 3px !important;
   --chrome-window-gap: 2px !important;
-  --chrome-block-radius: 5px !important;
+
+  /* Firefox 152 renamed --arrowpanel-* to --panel-* (bug 2019097). Setting a
+     variable the build doesn't define is inert, so both names are set rather
+     than picking one: --panel-* is what 152+ reads, --arrowpanel-* is what
+     ESR 140 reads. Same pattern for the toolbarbutton and urlbar-box tokens
+     below, renamed by bug 2034495. */
+  --panel-border-radius: var(--breeze-radius) !important;
+  --panel-menuitem-border-radius: var(--breeze-radius) !important;
+  --panel-padding-block: 3px !important;
+  --panel-menuitem-margin-inline: 3px !important;
+  --arrowpanel-border-radius: var(--breeze-radius) !important;
+  --arrowpanel-menuitem-border-radius: var(--breeze-radius) !important;
   --button-background-color-ghost-hover: -moz-menuhover !important;
   --button-text-color-ghost-hover: -moz-menuhovertext !important;
-  --button-background-color-ghost-acitve: -moz-menuhover !important;
   --button-background-color-ghost-active: -moz-menuhover !important;
   --urlbarView-result-button-hover-color: var(--button-text-color) !important;
   --toolbarbutton-background-color-hover: transparent !important;
@@ -31,4 +39,12 @@
   --toolbarbutton-background-color-active: -moz-menuhover !important;
   --urlbar-box-background-color-hover: transparent !important;
   --urlbar-box-background-color-active: -moz-menuhover !important;
+
+  /* Pre-152 names for the six above. */
+  --toolbarbutton-hover-background: transparent !important;
+  --toolbarbutton-hover-outline-color: SelectedItem !important;
+  --toolbarbutton-active-outline-color: SelectedItem !important;
+  --toolbarbutton-active-background: -moz-menuhover !important;
+  --urlbar-box-hover-bgcolor: transparent !important;
+  --urlbar-box-active-bgcolor: -moz-menuhover !important;
 }

@@ -12,11 +12,14 @@
   findbar {
     display: flex !important;
 
-    border-radius: 5px !important;
+    border-radius: var(--breeze-radius) !important;
     margin: 0px !important;
 
     width: 90% !important;
-    max-width: calc(var(--theme-better_find_bar-textbox_width) * 1px);
+    /* Set by zen-better-findbar, which this is adapted from; undefined in plain
+       Firefox, where it would otherwise drop max-width entirely. 800 is that
+       mod's own default. */
+    max-width: calc(var(--theme-better_find_bar-textbox_width, 800) * 1px);
 
     height: auto !important;
 
@@ -29,7 +32,7 @@
 
     overflow: unset !important;
 
-    background: var(--toolbar-background-color) !important;
+    background: var(--breeze-toolbar-background) !important;
     border: 1px solid var(--chrome-content-separator-color) !important;
 
     transition: transform 0.35s ease !important;
