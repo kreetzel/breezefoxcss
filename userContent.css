@@ -16,6 +16,7 @@
     --border-radius-large: 5px !important;
     --border-radius-xlarge: 5px !important;
     --border-radius-xxlarge: 5px !important;
+    --input-search-border-radius: 5px !important;
     --content-search-handoff-ui-border-radius: 5px !important;
     --color-accent-primary-hover: -moz-menuhover !important;
     --button-background-color-primary-hover: -moz-menuhover !important;
@@ -28,6 +29,12 @@
     --card-border-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)) !important;
     --color-gray-0: #fbfbfb !important;
     --color-gray-05: #fbfbfb !important;
+    --focus-outline-width: 0 !important;
+  }
+
+  .nova-enabled .edit-topsites .topsite-form .form-wrapper input[type="text"]:focus-visible {
+    outline: none;
+    border-color: var(--color-accent-primary) !important;
   }
 
   #input:is([type="checkbox"]):is([value="on"]),
@@ -106,7 +113,7 @@
     border: solid 1px transparent !important;
   }
 
-  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover):not(:has(.add-button)) {
     background:  color-mix(in srgb, SelectedItem 30%, transparent) !important;
     border: solid 1px SelectedItem !important;
   }

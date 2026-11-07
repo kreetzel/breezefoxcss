@@ -84,8 +84,8 @@ menuitem:hover:not([disabled]),
   border: solid 1px SelectedItem !important;
 }
 
-.urlbar-background {
-  border: 1px solid var(--panel-border-color) !important;
+.urlbarView-background {
+  border: solid 1px var(--panel-border-color) !important;
 }
 
 .unified-extensions-item-menu-button.subviewbutton {
@@ -118,4 +118,16 @@ menu, menuitem {
 
 #downloadsPanel-blockedSubview, #downloadsPanel-mainView {
   padding: 3px !important;
+}
+
+.subview-subheader, panelview .toolbarbutton-1, .subviewbutton:not(.unified-extensions-item-action-button), .widget-overflow-list .toolbarbutton-1, [role="menuitem"] {
+  max-height: 27px !important;
+}
+
+button[role="menuitem"] label {
+  margin-top: -4px !important;
+}
+
+button[role="menuitem"] .shortcut {
+  margin-top: -3px !important;
 }

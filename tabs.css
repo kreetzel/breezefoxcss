@@ -1,5 +1,6 @@
 :root {
   --toolbar-field-border-color: var(--chrome-content-separator-color) !important;
+  --tab-selected-outline-color: var(--chrome-content-separator-color) !important;
   --tab-border-radius: 5px !important;
 }
 
@@ -63,6 +64,23 @@
   border-top: none !important;
 }
 
+:root:not([inFullscreen], [inDOMFullscreen]) #browser {
+  border: solid 1px var(--tabs-navbar-separator-color) !important;
+  border-top: none !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+
+#PersonalToolbar {
+@media -moz-pref("browser.nova.enabled") {
+  :root:not([lwtheme]) &:not([collapsed]) {
+    border-top: none !important;
+  }
+}
+}
+
 :root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem), :root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) {
   & ~ #tabbrowser-tabs[orient="horizontal"]::before {
     display: none !important;
@@ -85,7 +103,7 @@
   #tabbrowser-tabpanels > :not(.split-view-panel) .browserContainer {
   @media not -moz-pref("sidebar.verticalTabs") {
     :root[uidensity="compact"] #sidebar-container[hidden] ~ #tabbrowser-tabbox & {
-      border-radius: 0 0 5px 5px !important;
+      border-radius: 0 /*0 5px 5px*/ !important;
     }
   }
   }
